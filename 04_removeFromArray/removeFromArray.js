@@ -1,23 +1,29 @@
-const removeFromArray = function (array, valueToRemove) {
+const removeFromArray = function (array, ...valuesToRemove) {
 
-    // build a new array, avoiding provided value
+    // using rest parameters: valuesToRemove is now an array of all args after the first
+
     let newArray = [];
 
-    for (const item of array) {
-        if (item != valueToRemove) {
-            newArray.push(item);
-            console.log("Added " + item + " to the new array");
+    for (const iterator of array) {
+
+        if (!valuesToRemove.includes(iterator)) {
+            newArray.push(iterator);
         }
     }
-
 
     return newArray;
 
 
 
 
-
 };
+
+
+
+
+
+
+
 
 // Do not edit below this line
 module.exports = removeFromArray;
