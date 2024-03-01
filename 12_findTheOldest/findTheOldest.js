@@ -4,7 +4,7 @@ const findTheOldest = function (people) {
 
     // try using the accumlator as a person object that only updates if the new person is older
 
-    return people.reduce(function (oldestPerson, currentPerson) {
+    return people.reduce((oldestPerson, currentPerson) => {
 
         if (!oldestPerson.name) {
 
@@ -19,7 +19,6 @@ const findTheOldest = function (people) {
     }, {});
 };
 
-console.log(findTheOldest(people));
 
 
 
